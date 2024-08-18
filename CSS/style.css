@@ -1,48 +1,3 @@
-@media screen and (min-width: 768px) {
-  header .title {
-    font-size: 35px;
-    width: 250px;
-  }
-  .main-blog section {
-    grid-template-columns: 1fr 1fr;
-  }
-  .main-np {
-    height: 1020px;
-  }
-  .main-np section {
-    height: 600px;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 50%);
-  }
-  .main-np section .nombre-producto {
-    display: none;
-  }
-  .main-np .ajo img, .main-np .cebolla img, .main-np .zanahoria img {
-    padding: 0 200px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  header .title {
-    font-size: 50px;
-    width: 350px;
-  }
-  #entrada3 {
-    display: block;
-  }
-  .main-blog section {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  .main-np {
-    height: 1000px;
-  }
-  .main-np section {
-    height: 600px;
-    grid-template-rows: repeat(3, 80%);
-  }
-  .main-np .ajo img, .main-np .cebolla img, .main-np .zanahoria img {
-    padding: 0 100px;
-  }
-}
 /* atributos para todo el sitio */
 * {
   margin: 0;
@@ -238,6 +193,52 @@ footer {
 }
 footer p {
   margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  header .title {
+    font-size: 35px;
+    width: 250px;
+  }
+  .main-blog section {
+    grid-template-columns: 1fr 1fr;
+  }
+  .main-np {
+    height: 1020px;
+  }
+  .main-np section {
+    height: 600px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 50%);
+  }
+  .main-np section .nombre-producto {
+    display: none;
+  }
+  .main-np .ajo img, .main-np .cebolla img, .main-np .zanahoria img {
+    padding: 0 200px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header .title {
+    font-size: 50px;
+    width: 350px;
+  }
+  #entrada3 {
+    display: block;
+  }
+  .main-blog section {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .main-np {
+    height: 1800px;
+  }
+  .main-np section {
+    height: 600px;
+    grid-template-rows: repeat(3, 80%);
+  }
+  .main-np .ajo img, .main-np .cebolla img, .main-np .zanahoria img {
+    padding: 0 300px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
