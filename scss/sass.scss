@@ -1,0 +1,206 @@
+// import
+
+@import "utilidades/variables";
+@import "utilidades/mixin";
+@import "utilidades/mq";
+
+
+/* atributos para todo el sitio */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    width: 100%;
+    background-color: rgb(0, 0, 0); /* Color de fondo negro */
+    .icono{
+        display: none;
+        @include medidas(80px,78px);
+        position: absolute;
+        top: 42px;
+        right: 240px;
+        text-align: right;
+    }
+    .title {
+        color: $color-letra;
+        font-size: 20px;
+        @include medidas(170px,60px);
+        position: absolute;
+        top: 36px; 
+        right: 40px;
+        text-align: right;
+    }
+    .subtitle {
+        display: none;
+        color: whitesmoke;
+        font-size: medium; 
+        font-weight: normal; 
+        font-style: italic;
+        @include medidas(300px,100px);
+        position: absolute;
+        top: 195px; 
+        right: 40px;
+        text-align: right; 
+    }
+    .banner{
+        width: 100%;
+    }
+}
+
+nav{
+    background-color: whitesmoke;
+    color: $color-principal;
+    list-style: none;
+    text-decoration: none;
+    text-align: $centrado;
+}
+
+.navbar-brand{
+    width: 10%;
+}
+
+.nav-item {
+    color: $color-letra;
+}
+
+main{
+    .whatsapp{
+        position: sticky;
+        bottom: 10px;
+        text-align: right;
+        .whatsapp-icon{ 
+            @include medidas(40px,40px);
+            margin-right: 10px;
+        }
+    }
+    .suscribete{
+        width: 100px;
+    }
+    .email{
+        width: 200px;
+    }
+}
+
+.main-index{
+    display: flex;
+    flex-direction: column;
+    justify-content: $centrado;
+    text-align: $centrado;
+    margin-top: 10px;
+    p{
+        margin: 10px;
+    }
+    .newsLetter{
+        text-align: $centrado;
+        font-size: larger;
+        margin-top: 40px;
+        margin-bottom: 0;
+    }
+    .subletter{
+        text-align: $centrado;
+        font-size: 10px;
+        margin-top: 0px;
+        margin-bottom: 4px;
+    }
+}
+
+.main-np{
+    text-align: $centrado;
+    margin: 10px;
+    section{
+        height: 80vh;
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: repeat(3, 25%);
+        row-gap: 10px;
+        .nombre-producto{
+            display: flex;
+            align-items: $centrado;
+            margin-left: 5px;
+        }
+    }
+    .ajo, .cebolla, .zanahoria{
+        img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        }
+    }
+}
+
+.main-blog{
+    text-align: $centrado;
+    section{
+        display: grid;
+        grid-template-columns: 1fr; /* repeat(auto-fill, minmax(300px, 1fr)); */
+        gap: 20px;
+        padding: 20px;
+        .entradas{
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 10px;
+            position: relative;
+        }
+    }
+    #entrada3{
+        display: none;
+    }
+    
+    .full{
+        display: none;
+    }
+    
+    .entradas:target .full{
+        display: block;
+    }
+    
+    .entradas:target .short{
+        display: none;
+    }
+    .leer {
+        display: inline-block;
+        margin-top: 10px;
+        background-color: #007BFF;
+        color: $color-letra;
+        padding: 10px;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+    div{
+        img{
+            @include medidas(70%,15%);
+            object-fit: cover;
+        }
+    }
+}
+
+.main-r{
+    text-align: $centrado;
+    margin: 10px;
+    .recetas{
+        border: 1px solid $color-principal;
+        border-radius: 10px;
+        padding: 5px;
+        img{
+            @include medidas(70%,15%);
+        }
+        ul, ol{
+            text-align: start;
+            padding-left: 15px;
+            font-size: 12px;
+        }
+    }
+}
+
+footer{
+    text-align: $centrado;
+    margin-top: 5px;
+    background-color: $color-principal;
+    color: $color-letra;
+    p{
+        margin:0;
+    }
+}

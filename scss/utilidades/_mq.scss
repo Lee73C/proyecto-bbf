@@ -1,0 +1,57 @@
+@media screen and (min-width: 768px){
+    header{
+        .title{
+        font-size: 35px;
+        width: 250px;
+        }
+    }
+    .main-blog{
+        section{
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    .main-np{
+        height: 1020px;
+        section{
+            height: 600px;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 50%);
+            .nombre-producto{
+                display: none;
+            }
+        }
+        .ajo, .cebolla, .zanahoria{
+            img{
+                padding: 0 200px;
+            }
+        }
+    }
+}
+@media screen and (min-width: 1024px){
+    header {
+        .title{
+        font-size: 50px;
+        width: 350px;
+        }
+    }
+    #entrada3{
+        display: block;
+    }
+    .main-blog {
+        section{
+        grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+    .main-np{
+        height: 1000px;
+        section{
+            height: 600px;
+            grid-template-rows: repeat(3, 80%);
+        }
+        .ajo, .cebolla, .zanahoria{
+            img{
+            padding: 0 100px;
+            }
+        }
+    }
+}
