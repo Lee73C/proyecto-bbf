@@ -19,8 +19,8 @@ header {
         display: none;
         @include medidas(80px,78px);
         position: absolute;
-        top: 42px;
-        right: 240px;
+        top: 45px;
+        right: 200px;
         text-align: right;
     }
     .title {
@@ -47,22 +47,20 @@ header {
     .banner{
         width: 100%;
     }
-}
-
-nav{
-    background-color: whitesmoke;
-    color: $color-principal;
-    list-style: none;
-    text-decoration: none;
-    text-align: $centrado;
-}
-
-.navbar-brand{
-    width: 10%;
-}
-
-.nav-item {
-    color: $color-letra;
+    nav{
+        background-color: $color-principal;
+        text-align: $centrado;
+    }
+    .navbar-brand{
+        width: 20%;
+    }
+    .nav-item {
+        list-style: none;
+        text-decoration: none;
+        .nav-link{
+            color: $color-letra;
+        }
+    }
 }
 
 main{
@@ -88,19 +86,26 @@ main{
     flex-direction: column;
     justify-content: $centrado;
     text-align: $centrado;
-    margin-top: 10px;
-    p{
-        margin: 10px;
+    margin-top: 10px; 
+    .parrafos{
+        margin: 15px;
+        .bienvenida, .descripcion{
+            margin: 20px;
+        }
+        .canister, .vegetables{
+            display: none;
+            @include medidas(200px,200px)
+        }
     }
     .newsLetter{
         text-align: $centrado;
-        font-size: larger;
+        font-size: 30px;
         margin-top: 40px;
         margin-bottom: 0;
     }
     .subletter{
         text-align: $centrado;
-        font-size: 10px;
+        font-size: 15px;
         margin-top: 0px;
         margin-bottom: 4px;
     }
@@ -199,6 +204,9 @@ footer{
     margin-top: 5px;
     background-color: $color-principal;
     color: $color-letra;
+    img{
+        @include medidas(20px, 20px)
+    }
     p{
         margin:0;
     }
