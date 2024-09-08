@@ -8,7 +8,8 @@
 
 header {
   width: 100%;
-  background-color: rgb(0, 0, 0); /* Color de fondo negro */
+  background-color: rgb(0, 0, 0);
+  /* Color de fondo negro */
 }
 header .icono {
   display: none;
@@ -87,10 +88,12 @@ main .email {
 .main-index .parrafos {
   margin: 15px;
 }
-.main-index .parrafos .bienvenida, .main-index .parrafos .descripcion {
+.main-index .parrafos .bienvenida,
+.main-index .parrafos .descripcion {
   margin: 20px;
 }
-.main-index .parrafos .canister, .main-index .parrafos .vegetables {
+.main-index .parrafos .canister,
+.main-index .parrafos .vegetables {
   display: none;
   width: 200px;
   height: 200px;
@@ -113,35 +116,47 @@ main .email {
   margin: 10px;
 }
 .main-np section {
-  height: 80vh;
   display: grid;
-  grid-template-columns: 3fr 1fr;
-  grid-template-rows: repeat(3, 25%);
+  grid-template-columns: 3fr;
   row-gap: 10px;
 }
-.main-np section .nombre-producto {
-  display: flex;
-  align-items: center;
-  margin-left: 5px;
+.main-np section .ajo, .main-np section .cebolla, .main-np section .zanahoria {
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 50px;
 }
-.main-np .ajo img, .main-np .cebolla img, .main-np .zanahoria img {
-  width: 100%;
-  height: 100%;
+.main-np section .ajo img, .main-np section .cebolla img, .main-np section .zanahoria img {
   object-fit: cover;
+  border-radius: 20px;
+  height: 280px;
+  width: 176px;
+}
+.main-np section .ajo #nombre-producto, .main-np section .cebolla #nombre-producto, .main-np section .zanahoria #nombre-producto {
+  height: 20px;
+}
+.main-np section .ajo .nombre-producto, .main-np section .cebolla .nombre-producto, .main-np section .zanahoria .nombre-producto {
+  color: black;
+}
+.main-np section .ajo .descripcion-product, .main-np section .cebolla .descripcion-product, .main-np section .zanahoria .descripcion-product {
+  display: none;
 }
 
 .main-blog {
   text-align: center;
 }
+.main-blog p {
+  padding: 30px;
+}
 .main-blog section {
   display: grid;
-  grid-template-columns: 1fr; /* repeat(auto-fill, minmax(300px, 1fr)); */
+  grid-template-columns: 1fr;
   gap: 20px;
-  padding: 20px;
+  margin: 20px;
 }
 .main-blog section .entradas {
   border: 1px solid #ccc;
   padding: 10px;
+  padding-bottom: 180px;
   border-radius: 10px;
   position: relative;
 }
@@ -185,7 +200,8 @@ main .email {
   width: 70%;
   height: 15%;
 }
-.main-r .recetas ul, .main-r .recetas ol {
+.main-r .recetas ul,
+.main-r .recetas ol {
   text-align: start;
   padding-left: 15px;
   font-size: 12px;
@@ -193,16 +209,15 @@ main .email {
 
 footer {
   text-align: center;
-  margin-top: 5px;
+  margin-top: 10px;
   background-color: black;
   color: white;
+  padding: 5px;
 }
 footer img {
   width: 20px;
   height: 20px;
-}
-footer p {
-  margin: 0;
+  margin: 10px;
 }
 
 @media screen and (min-width: 768px) {
@@ -223,31 +238,32 @@ footer p {
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
   }
-  .main-index .parrafos .canister, .main-index .parrafos .vegetables {
+  .main-index .parrafos .canister,
+  .main-index .parrafos .vegetables {
     display: block;
     grid-row: span 2;
     position: sticky;
     top: 200px;
   }
-  .main-index .parrafos .bienvenida, .main-index .parrafos .descripcion {
+  .main-index .parrafos .bienvenida,
+  .main-index .parrafos .descripcion {
     grid-column: span 2;
   }
   .main-blog section {
     grid-template-columns: 1fr 1fr;
   }
-  .main-np {
-    height: 1020px;
+  .main-np section .ajo, .main-np section .cebolla, .main-np section .zanahoria {
+    display: flex;
+    flex-direction: row;
+    padding-left: 40px;
+    padding-right: 20px;
   }
-  .main-np section {
-    height: 600px;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 50%);
+  .main-np section .ajo div, .main-np section .cebolla div, .main-np section .zanahoria div {
+    align-content: center;
   }
-  .main-np section .nombre-producto {
-    display: none;
-  }
-  .main-np .ajo img, .main-np .cebolla img, .main-np .zanahoria img {
-    padding: 0 200px;
+  .main-np section .ajo .descripcion-product, .main-np section .cebolla .descripcion-product, .main-np section .zanahoria .descripcion-product {
+    display: block;
+    margin-left: 10px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -259,7 +275,7 @@ footer p {
     top: 250px;
   }
   header nav {
-    margin-right: 80px;
+    margin-right: 100px;
     margin-left: 80px;
   }
   header .icono {
@@ -269,11 +285,17 @@ footer p {
     top: 50px;
     right: 270px;
   }
+  header .banner {
+    object-fit: cover;
+  }
   #entrada3 {
     display: block;
   }
   .main-blog section {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  .main-blog section #entrada3 {
+    display: block;
   }
   .main-np {
     height: 1800px;
@@ -282,8 +304,16 @@ footer p {
     height: 600px;
     grid-template-rows: repeat(3, 80%);
   }
-  .main-np .ajo img, .main-np .cebolla img, .main-np .zanahoria img {
-    padding: 0 300px;
+  .main-np .ajo a,
+  .main-np .cebolla a,
+  .main-np .zanahoria a {
+    align-content: center;
+  }
+  .main-np .ajo a img,
+  .main-np .cebolla a img,
+  .main-np .zanahoria a img {
+    height: 420px;
+    width: 264px;
   }
 }
 

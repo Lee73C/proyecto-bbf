@@ -1,96 +1,123 @@
-@media screen and (min-width: 768px){
-    header{
-        .title{
-        font-size: 35px;
-        width: 250px;
+@media screen and (min-width: 768px) {
+    header {
+        .title {
+            font-size: 35px;
+            width: 250px;
         }
-        .subtitle{
+        .subtitle {
             display: block;
         }
-        .navbar-brand{
+        .navbar-brand {
             width: 20%;
         }
-        .icono{
+        .icono {
             display: block;
         }
     }
-    .main-index{
-        .parrafos{
+
+    .main-index {
+        .parrafos {
             display: grid;
             grid-template-columns: 1fr 4fr 1fr;
-            .canister, .vegetables{
+
+            .canister,
+            .vegetables {
                 display: block;
                 grid-row: span 2;
                 position: sticky;
                 top: 200px;
             }
-            .bienvenida, .descripcion{
+
+            .bienvenida,
+            .descripcion {
                 grid-column: span 2;
             }
         }
-        
+
     }
-    .main-blog{
-        section{
+
+    .main-blog {
+        section {
             grid-template-columns: 1fr 1fr;
         }
     }
-    .main-np{
-        height: 1020px;
-        section{
-            height: 600px;
-            grid-template-columns: 1fr;
-            grid-template-rows: repeat(3, 50%);
-            .nombre-producto{
-                display: none;
-            }
-        }
-        .ajo, .cebolla, .zanahoria{
-            img{
-                padding: 0 200px;
+
+    .main-np {
+        section {
+            .ajo, .cebolla, .zanahoria {
+                display: flex;
+                flex-direction: row;
+                padding-left: 40px;
+                padding-right: 20px;
+                div{
+                    align-content: center;
+                }
+                .descripcion-product{
+                    display: block;
+                    margin-left: 10px;
+                }
             }
         }
     }
 }
-@media screen and (min-width: 1024px){
+
+@media screen and (min-width: 1024px) {
     header {
-        .title{
-        font-size: 50px;
-        width: 350px;
+        .title {
+            font-size: 50px;
+            width: 350px;
         }
-        .subtitle{
+        .subtitle {
             top: 250px;
         }
-        nav{
-            margin-right: 80px;
-            margin-left: 80px;   
+        nav {
+            margin-right: 100px;
+            margin-left: 80px;
         }
-        .icono{
+        .icono {
             display: block;
             width: 120px;
             height: 120px;
             top: 50px;
             right: 270px;
         }
-    }
-    #entrada3{
-        display: block;
-    }
-    .main-blog {
-        section{
-        grid-template-columns: 1fr 1fr 1fr;
+        .banner{
+            object-fit: cover;
         }
     }
-    .main-np{
+
+    #entrada3 {
+        display: block;
+    }
+
+    .main-blog {
+        section {
+            grid-template-columns: 1fr 1fr 1fr;
+
+            #entrada3 {
+                display: block;
+            }
+        }
+    }
+
+    .main-np {
         height: 1800px;
-        section{
+
+        section {
             height: 600px;
             grid-template-rows: repeat(3, 80%);
         }
-        .ajo, .cebolla, .zanahoria{
-            img{
-            padding: 0 300px;
+
+        .ajo,
+        .cebolla,
+        .zanahoria {
+            a{
+                align-content: center;
+            img {
+                height: 420px;
+                width: 264px;
             }
+        }
         }
     }
 }
