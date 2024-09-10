@@ -59,6 +59,19 @@
             }
         }
     }
+    .main-contacto{
+        padding: 20px;
+        .formulario {
+            padding: 20px;
+            max-width: 500px;
+        }
+        .data {
+            font-size: 1.5rem;
+        }
+        .aceptar {
+            font-size: 1.2rem;
+        }
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -118,6 +131,17 @@
                 width: 264px;
             }
         }
+        }
+    }
+    .main-contacto{
+        .formulario {
+            padding: 30px;
+        }
+        .data {
+            font-size: 1.8rem;
+        }
+        .aceptar {
+            font-size: 1.3rem;
         }
     }
 }
