@@ -1,3 +1,4 @@
+/*media queries para tablet*/
 @media screen and (min-width: 768px) {
     header {
         .title {
@@ -73,7 +74,7 @@
         }
     }
 }
-
+/* media queries para escritorio*/
 @media screen and (min-width: 1024px) {
     header {
         .title {

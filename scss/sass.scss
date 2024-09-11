@@ -88,7 +88,7 @@ main {
         width: 200px;
     }
 }
-
+/* atributos para pagina principal*/
 .main-index {
     display: flex;
     flex-direction: column;
@@ -155,7 +155,7 @@ main {
         }
     }
 }
-
+/* atributos para pagina del blog*/
 .main-blog {
     text-align: $centrado;
     p{
@@ -170,7 +170,7 @@ main {
         .entradas {
             border: 1px solid #ccc;
             padding: 10px;
-            padding-bottom: 180px;
+            padding-bottom: 580px;
             border-radius: 10px;
             position: relative;
         }
@@ -209,7 +209,7 @@ main {
         }
     }
 }
-
+/* atributos para pagina de recetas*/
 .main-r {
     text-align: $centrado;
     margin: 10px;
@@ -225,13 +225,15 @@ main {
 
         ul,
         ol {
-            text-align: start;
+            display: inline-block ;
+            text-align: $centrado;
             padding-left: 15px;
             font-size: 12px;
+            list-style-position: inside;
         }
     }
 }
-
+/* atributos para pagina de contacto*/
 .main-contacto{
     display: flex;
     flex-direction: column;
@@ -251,7 +253,7 @@ main {
         margin-bottom: 10px;
     }
 }
-
+/* atributos para los campos de textos*/
     form {
         display: flex;
         flex-direction: column;
@@ -305,7 +307,7 @@ main {
         background-color: #0056b3;
     }
 }
-
+/* atributos para todos footers*/
 footer {
     text-align: $centrado;
     margin-top: 10px;
@@ -318,5 +320,6 @@ footer {
         margin: 10px;
     }
 }
+//import de mediaqueries
 
 @import "utilidades/mq";

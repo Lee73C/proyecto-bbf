@@ -64,6 +64,7 @@ main .suscribete {
 main .email {
   width: 200px; }
 
+/* atributos para pagina principal*/
 .main-index {
   display: flex;
   flex-direction: column;
@@ -114,6 +115,7 @@ main .email {
       .main-np section .ajo .descripcion-product, .main-np section .cebolla .descripcion-product, .main-np section .zanahoria .descripcion-product {
         display: none; }
 
+/* atributos para pagina del blog*/
 .main-blog {
   text-align: center; }
   .main-blog p {
@@ -126,7 +128,7 @@ main .email {
     .main-blog section .entradas {
       border: 1px solid #ccc;
       padding: 10px;
-      padding-bottom: 180px;
+      padding-bottom: 580px;
       border-radius: 10px;
       position: relative; }
   .main-blog #entrada3 {
@@ -150,6 +152,7 @@ main .email {
     height: 15%;
     object-fit: cover; }
 
+/* atributos para pagina de recetas*/
 .main-r {
   text-align: center;
   margin: 10px; }
@@ -162,10 +165,13 @@ main .email {
       height: 15%; }
     .main-r .recetas ul,
     .main-r .recetas ol {
-      text-align: start;
+      display: inline-block;
+      text-align: center;
       padding-left: 15px;
-      font-size: 12px; }
+      font-size: 12px;
+      list-style-position: inside; }
 
+/* atributos para pagina de contacto*/
 .main-contacto {
   display: flex;
   flex-direction: column;
@@ -174,7 +180,8 @@ main .email {
   min-height: 100vh;
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0; }
+  background-color: #f0f0f0;
+  /* atributos para los campos de textos*/ }
   .main-contacto div {
     padding: 20px; }
     .main-contacto div p {
@@ -227,6 +234,7 @@ main .email {
   .main-contacto button.aceptar:hover {
     background-color: #0056b3; }
 
+/* atributos para todos footers*/
 footer {
   text-align: center;
   margin-top: 10px;
@@ -238,6 +246,7 @@ footer {
     height: 20px;
     margin: 10px; }
 
+/*media queries para tablet*/
 @media screen and (min-width: 768px) {
   header .title {
     font-size: 35px;
@@ -285,6 +294,7 @@ footer {
       font-size: 1.5rem; }
     .main-contacto .aceptar {
       font-size: 1.2rem; } }
+/* media queries para escritorio*/
 @media screen and (min-width: 1024px) {
   header .title {
     font-size: 50px;
